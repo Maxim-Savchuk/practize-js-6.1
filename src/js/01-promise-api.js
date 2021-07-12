@@ -7,10 +7,10 @@
  */
 
 const promise = new Promise((resolve, reject) => {
-  const canFulfill = Math.random() > 0.5;
+  const canFullfill = Math.random() > 0.5;
 
   setTimeout(() => {
-    if (canFulfill) {
+    if (canFullfill) {
       resolve('Промис выполнился успешно, с результатом (исполнен, fulfilled)');
     }
 
@@ -18,9 +18,9 @@ const promise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
-// promise.then(onFulfilled, onRejected);
+// promise.then(onFullfilled, onRejected);
 
-function onFulfilled(result) {
+function onFullfilled(result) {
   console.log('onFulfilled -> onFulfilled');
   console.log(`✅ ${result}`);
 }
@@ -35,9 +35,9 @@ function onRejected(error) {
  * Promise.prototype.catch(error)
  * Promise.prototype.finally()
  */
-
+  
 promise
-  .then(onFulfilled)
+  .then(onFullfilled)
   .then(x => {
     console.log(x);
 
